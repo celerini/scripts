@@ -50,8 +50,10 @@ cd "$dir" || exit
 
 echo "# Translations"
 
+echo
 echo "## Statistics"
 
+echo
 echo "File | Messages | Translated | Translated% | Fuzzy | Untranslated"
 echo "--- | --: | --: | --: | --: | --:"
 
@@ -83,8 +85,17 @@ done
 
 percent=$((total_trans * 100 / total_all))
 
+echo
 echo "## Totals"
 
+echo
 echo "Files | Messages | Translated | Translated% | Fuzzy | Untranslated"
 echo "--: | --: | --: | --: | --: | --:"
 echo "$count | $total_all | $total_trans | $percent% | $total_fuzzy | $total_untrans"
+
+echo
+echo "---"
+
+echo
+echo -n "created using [$(basename "$0")]"
+echo "(https://github.com/celerini/scripts/blob/master/tt.sh)"
